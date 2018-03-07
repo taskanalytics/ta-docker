@@ -5,11 +5,11 @@ status:
 
 up:
 	@echo "Starting Redis and ArangoDB..."
-	@exec docker-compose up -d
+	@docker-compose up -d
 
 down:
 	@echo "Stopping Redis and ArangoDB..."
-	@exec docker-compose stop -t 300
+	@docker-compose stop -t 300
 
 delete:	down
 	@echo "Deleting ArangoDB data..."
